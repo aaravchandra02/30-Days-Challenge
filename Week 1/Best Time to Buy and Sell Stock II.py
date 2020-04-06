@@ -26,3 +26,13 @@ Input: [7,6,4,3,1]
 Output: 0
 Explanation: In this case, no transaction is done, i.e. max profit = 0.
 """
+
+
+class Best_Time_2:
+    def maxProfit(self, prices: List[int]) -> int:
+        p, profit = 0, 0
+        for i in range(1, len(prices)):
+            if(prices[i] > prices[i-1]):
+                p = prices[i] - prices[i-1]
+                profit += p
+        return profit
