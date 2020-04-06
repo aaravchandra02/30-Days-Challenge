@@ -72,7 +72,8 @@ class Move_Zeroes:
         while i < len(nums):
             nums[i] = 0
             i += 1
+        print(nums)
 
 
 a = Move_Zeroes()
-a.moveZeroes_no_extra_space([0, 1, 0, 3, 12])
+a.moveZeroes_no_extra_space_2([0, 1, 0, 3, 12])
