@@ -23,7 +23,7 @@ class Group_Anagrams:
         """
         Basic Idea:
         Iterate over elements and sort each alphabetically. we will make them as keys.
-        Same keys for anagram 
+        Same keys for anagram. 
         """
         d = {}
         for i in strs:
