@@ -22,3 +22,28 @@ Since the list has two middle nodes with values 3 and 4, we return the second on
 Note:
 
 The number of nodes in the given list will be between 1 and 100."""
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+
+class Solution:
+    def middleNode(self, head: ListNode) -> ListNode:
+        c = 0
+        temp = head
+        if(head.next == None):
+            return head
+        while(temp != None):
+            c += 1
+            temp = temp.next
+        if(c % 2):
+            c = c//2
+        else:
+            c = c/2
+        while(c > 1):
+            head = head.next
+            c -= 1
+        return head.next
