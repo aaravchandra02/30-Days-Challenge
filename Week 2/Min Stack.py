@@ -42,9 +42,8 @@ class MinStack:
 
 
 # Your MinStack object will be instantiated and called as such:
-obj = MinStack()
-print(obj)
-obj.push(9)
-obj.pop()
-param_3 = obj.top()
-param_4 = obj.getMin()
+# obj = MinStack()
+# obj.push(x)
+# obj.pop()
+# param_3 = obj.top()
+# param_4 = obj.getMin()
