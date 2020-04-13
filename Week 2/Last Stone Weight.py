@@ -27,3 +27,15 @@ Note:
 1 <= stones.length <= 30
 1 <= stones[i] <= 1000
 """
+
+
+class Solution:
+    def lastStoneWeight(self, stones: List[int]) -> int:
+        print(stones)
+        while(len(stones) > 1):
+            stones = sorted(stones, reverse=True)
+            stones[1] = stones[0]-stones[1]
+            stones = stones[1:]
+        return(stones[0])
+
+# Use heap now:

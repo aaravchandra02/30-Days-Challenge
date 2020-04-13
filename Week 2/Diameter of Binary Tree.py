@@ -11,3 +11,26 @@ Given a binary tree
 Return 3, which is the length of the path [4,2,1,3] or [5,2,1,3].
 
 Note: The length of path between two nodes is represented by the number of edges between them."""
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+
+class Solution:
+    def diameterOfBinaryTree(self, root: TreeNode) -> int:
+        self.max_diameter = 1
+
+        def height(node):
+            if not node:
+                return 0
+            L = height(node.left)
+            R = height(node.right)
+            self.max_diameter = max(self.max_diameter, L+R+1)
+            return(max(L, R) + 1)
+
+        height(root)
+        return(self.max_diameter - 1)
