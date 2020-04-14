@@ -39,6 +39,7 @@ shift[i].length == 2
 
 
 class Perform_String_Shifts:
+    # O(n+l)
     def stringShift(self, s, shift):
 
         for i in shift:
@@ -58,6 +59,9 @@ class Perform_String_Shifts:
                 s = rest+shiftable
                 print(s)
         print(s)
+
+    def stringShift_net(self, s, shift):
+        pass
 
 
 a = Perform_String_Shifts()
